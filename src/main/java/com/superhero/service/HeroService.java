@@ -1,5 +1,7 @@
 package com.superhero.service;
 
+import com.superhero.error.ConflictException;
+import com.superhero.error.NotFoundException;
 import com.superhero.model.Hero;
 import com.superhero.repository.HeroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+
 
 
 
@@ -50,16 +53,19 @@ public class HeroService {
     }
 
     public Hero getById(String id){
-
-
-        return heroRepository.findById(id).get();
+        try {
+            return heroRepository.findById(id).get();
+        } catch (NoSuchElementException ex) {
+            throw new NotFoundException(String.format("No Record with the id [%s] was found in our database", id));
+        }
     }
 
 
     public Hero save(Hero hero) {
-         /*if(heroRepository.findBySuperheroname(hero.getSuperheroname()) != null) {
+           /*if(heroRepository.findBySuperheroname(hero.getSuperheroname()) != null)
+         {
             throw new ConflictException("Another record with the same record heroname exists");
-        } */
+         } */
         return heroRepository.insert(hero);
     }
 
