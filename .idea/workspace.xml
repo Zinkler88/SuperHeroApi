@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c08889a2-0f30-4078-bbd6-b3b077e65c55" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/superhero/service/HeroControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/superhero/service/HeroServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superhero/error/ApiBaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superhero/error/ApiBaseException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superhero/error/ApiExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superhero/error/ApiExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superhero/error/ConflictException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superhero/error/ConflictException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superhero/error/ErrorDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superhero/error/ErrorDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superhero/error/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superhero/error/NotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superhero/error/ValidationError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superhero/error/ValidationError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superhero/repository/MissionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superhero/repository/MissionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/superhero/service/HeroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/superhero/service/HeroService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,15 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/superhero/error/ApiBaseException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/superhero/error/ApiExceptionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/superhero/service/HeroService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
+            <state relative-caret-position="569">
               <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -74,11 +59,37 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/superhero/service/HeroServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="89" column="69" selection-start-line="89" selection-start-column="69" selection-end-line="89" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1130#1131#0" expanded="true" />
+                <element signature="e#1178#1179#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/superhero/service/HeroControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/superhero/controller/HeroController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="295">
-              <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,32 +117,6 @@
               <folding>
                 <element signature="e#263#264#0" expanded="true" />
                 <element signature="e#306#307#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/superhero/error/ValidationError.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#462#463#0" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#380#381#0" expanded="true" />
-                <element signature="e#409#410#0" expanded="true" />
-                <element signature="e#459#460#0" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#551#552#0" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
-                <element signature="e#619#620#0" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-                <element signature="e#733#734#0" expanded="true" />
-                <element signature="e#775#776#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,6 +155,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>todo</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -191,6 +181,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/superhero/error/ValidationError.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superhero/error/ApiExceptionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/superhero/service/HeroService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/superhero/service/HeroControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/superhero/service/HeroServiceTest.java" />
       </list>
     </option>
   </component>
@@ -256,42 +248,27 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="superhero" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SuperHeroApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="SuperHeroApi1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="superhero" type="462c0819:PsiDirectoryNode" />
-              <item name="error" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SuperHeroApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="SuperHeroApi1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="superhero" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SuperHeroApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="SuperHeroApi1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="superhero" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SuperHeroApi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperHeroApi1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="superhero" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -317,7 +294,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.RunAllTests">
     <configuration name="SuperHero" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.superhero.SuperHero" />
       <module name="SuperHeroApi1" />
@@ -331,6 +308,131 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HeroControllerTest.testGetAllHeroes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SuperHeroApi1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.superhero.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.superhero.service" />
+      <option name="MAIN_CLASS_NAME" value="com.superhero.service.HeroControllerTest" />
+      <option name="METHOD_NAME" value="testGetAllHeroes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeroControllerTest.whenGetAllTodos_thenReturnJsonArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SuperHeroApi1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.superhero.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.superhero.service" />
+      <option name="MAIN_CLASS_NAME" value="com.superhero.service.HeroControllerTest" />
+      <option name="METHOD_NAME" value="whenGetAllTodos_thenReturnJsonArray" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeroControllerTest.whenPostHero_thenCreateHero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SuperHeroApi1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.superhero.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.superhero.service" />
+      <option name="MAIN_CLASS_NAME" value="com.superhero.service.HeroControllerTest" />
+      <option name="METHOD_NAME" value="whenPostHero_thenCreateHero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeroServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SuperHeroApi1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.superhero.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.superhero.service" />
+      <option name="MAIN_CLASS_NAME" value="com.superhero.service.HeroServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeroServiceTest.whenFindAll_ReturnHeroList" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="SuperHeroApi1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.superhero.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.superhero.service" />
+      <option name="MAIN_CLASS_NAME" value="com.superhero.service.HeroServiceTest" />
+      <option name="METHOD_NAME" value="whenFindAll_ReturnHeroList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeroServiceTest.whenInvalidId_HeroShouldNotBeFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SuperHeroApi1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.superhero.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.superhero.service" />
+      <option name="MAIN_CLASS_NAME" value="com.superhero.service.HeroServiceTest" />
+      <option name="METHOD_NAME" value="whenInvalidId_HeroShouldNotBeFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunAllTests" type="JUnit" factoryName="JUnit">
+      <module name="SuperHeroApi1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.SuperHero" />
+      <item itemvalue="JUnit.HeroServiceTest.whenFindAll_ReturnHeroList" />
+      <item itemvalue="JUnit.RunAllTests" />
+      <item itemvalue="JUnit.HeroControllerTest.testGetAllHeroes" />
+      <item itemvalue="JUnit.HeroControllerTest.whenGetAllTodos_thenReturnJsonArray" />
+      <item itemvalue="JUnit.HeroControllerTest.whenPostHero_thenCreateHero" />
+      <item itemvalue="JUnit.HeroServiceTest" />
+      <item itemvalue="JUnit.HeroServiceTest.whenInvalidId_HeroShouldNotBeFound" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HeroControllerTest.whenPostHero_thenCreateHero" />
+        <item itemvalue="JUnit.HeroControllerTest.whenGetAllTodos_thenReturnJsonArray" />
+        <item itemvalue="JUnit.HeroControllerTest.testGetAllHeroes" />
+        <item itemvalue="JUnit.HeroServiceTest.whenInvalidId_HeroShouldNotBeFound" />
+        <item itemvalue="JUnit.HeroServiceTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -345,12 +447,44 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="HeroServiceTest_whenFindAll_ReturnHeroList - 2019.06.15 at 12h 45m 21s.xml">
+      <configuration name="HeroServiceTest.whenFindAll_ReturnHeroList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeroServiceTest_whenFindAll_ReturnHeroList - 2019.06.15 at 12h 48m 27s.xml">
+      <configuration name="HeroServiceTest.whenFindAll_ReturnHeroList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeroServiceTest - 2019.06.15 at 12h 51m 24s.xml">
+      <configuration name="HeroServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeroServiceTest_whenInvalidId_HeroShouldNotBeFound - 2019.06.15 at 13h 16m 18s.xml">
+      <configuration name="HeroServiceTest.whenInvalidId_HeroShouldNotBeFound" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeroControllerTest_testGetAllHeroes - 2019.06.15 at 13h 43m 05s.xml">
+      <configuration name="HeroControllerTest.testGetAllHeroes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeroControllerTest_whenGetAllTodos_thenReturnJsonArray - 2019.06.15 at 13h 52m 58s.xml">
+      <configuration name="HeroControllerTest.whenGetAllTodos_thenReturnJsonArray" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeroControllerTest_whenPostHero_thenCreateHero - 2019.06.15 at 14h 00m 45s.xml">
+      <configuration name="HeroControllerTest.whenPostHero_thenCreateHero" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeroControllerTest_whenPostHero_thenCreateHero - 2019.06.15 at 14h 08m 09s.xml">
+      <configuration name="HeroControllerTest.whenPostHero_thenCreateHero" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunAllTests - 2019.06.15 at 14h 12m 33s.xml">
+      <configuration name="RunAllTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunAllTests - 2019.06.15 at 14h 13m 15s.xml">
+      <configuration name="RunAllTests" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1249" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29246065" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8290398" visible="true" weight="0.29660314" />
+      <window_info id="Structure" order="1" sideWeight="0.17096019" side_tool="true" visible="true" weight="0.29660314" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -358,7 +492,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32861635" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32861635" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -559,7 +693,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/superhero/controller/HeroController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
-          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -568,7 +702,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/superhero/service/HeroService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
+        <state relative-caret-position="569">
           <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -576,6 +710,28 @@
             <element signature="e#1558#1559#0" expanded="true" />
             <element signature="e#2178#2179#0" expanded="true" />
             <element signature="e#2223#2224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/superhero/service/HeroControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/superhero/service/HeroServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="89" column="69" selection-start-line="89" selection-start-column="69" selection-end-line="89" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
           </folding>
         </state>
       </provider>
