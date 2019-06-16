@@ -3,7 +3,9 @@ package com.superhero.service;
 import com.superhero.error.ConflictException;
 import com.superhero.error.NotFoundException;
 import com.superhero.model.Hero;
+import com.superhero.model.Mission;
 import com.superhero.repository.HeroRepository;
+import com.superhero.utils.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,22 +14,14 @@ import java.util.NoSuchElementException;
 
 
 
-
-
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.stereotype.Service;
-
-        import java.util.ArrayList;
-        import java.util.Arrays;
-        import java.util.List;
-        import java.util.NoSuchElementException;
-
 @Service
 public class HeroService {
 
 
     @Autowired
     private HeroRepository heroRepository;
+    @Autowired
+    private MissionService missionService;
 
     // private List<String> Hereos = Arrays.asList("test1", "test2", "test3");
     /* private List<Mission> Missions =  new ArrayList<>(Arrays.asList(
@@ -76,7 +70,30 @@ public class HeroService {
 
 
     public void delete(String id) {
-        heroRepository.deleteById(id);
+        try {
+             heroRepository.deleteById(id);
+        } catch (NoSuchElementException ex) {
+            throw new NotFoundException(String.format("No Record with the id [%s] was found in our database", id));
+        }
+    }
+
+
+    public Hero addMissionToHero(String heroId, String missionId) {
+        Hero hero = this.getById(heroId);
+        Mission mission = missionService.getMissionById(missionId);
+        hero.addMission(mission);
+        return heroRepository.save(hero);
+    }
+
+    public ApiResponse romoveMissionToHero(String heroId, String missionId) {
+        Hero hero = this.getById(heroId);
+        Mission mission = missionService.getMissionById(missionId);
+        if(mission.isCompleted()){
+            return new ApiResponse(false, "Unable to remove a completed mission");
+        }
+        hero.removeMission(mission);
+        heroRepository.save(hero);
+        return new ApiResponse(true, "Mission removed from Hero");
     }
 
 

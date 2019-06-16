@@ -2,6 +2,7 @@ package com.superhero.controller;
 
         import com.superhero.model.Hero;
         import com.superhero.service.HeroService;
+        import com.superhero.utils.ApiResponse;
         import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.http.HttpStatus;
         import org.springframework.http.ResponseEntity;
@@ -27,9 +28,9 @@ public class HeroController {
         return new ResponseEntity<List<Hero>>(result, HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Hero> getHeroById(@PathVariable String id){
-        Hero result = heroService.getById(id);
+    @GetMapping("/{heroId}")
+    public ResponseEntity<Hero> getHeroById(@PathVariable String heroId){
+        Hero result = heroService.getById(heroId);
         return new ResponseEntity<Hero>(result, HttpStatus.OK);
     }
 
@@ -40,16 +41,28 @@ public class HeroController {
     }
 
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Hero> updateHero(@PathVariable String id, @Valid @RequestBody Hero hero) {
-        Hero result = heroService.update(id, hero);
+    @PutMapping("/{heroId}")
+    public ResponseEntity<Hero> updateHero(@PathVariable String heroId, @Valid @RequestBody Hero hero) {
+        Hero result = heroService.update(heroId, hero);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteHero(@PathVariable String id) {
-        heroService.delete(id);
+    @DeleteMapping("/{heroId}")
+    public ResponseEntity<Void> deleteHero(@PathVariable String heroId) {
+        heroService.delete(heroId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @PostMapping("/{heroId}/{missionId}")
+    public ResponseEntity<Hero> addMissionToHero(@PathVariable String heroId, @PathVariable String missionId) {
+        Hero result = heroService.addMissionToHero(heroId, missionId);
+        return new ResponseEntity<Hero>(result, HttpStatus.CREATED);
+    }
+
+
+    @DeleteMapping("/{heroId}/{missionId}")
+    public ApiResponse removeMissionToHero(@PathVariable String heroId, @PathVariable String missionId) {
+        return heroService.romoveMissionToHero(heroId, missionId);
     }
 }
 
