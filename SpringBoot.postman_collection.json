@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "533d76a6-edc1-4fb5-8bf3-ebb5a24a8e57",
+		"name": "SpringBoot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Heroes",
+			"item": [
+				{
+					"name": "/heroes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://{{HOST}}:{{PORT}}/api/v1/heroes/"
+					},
+					"response": []
+				},
+				{
+					"name": "/heroes/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://{{HOST}}:{{PORT}}/api/v1/heroes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/heroes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://{{HOST}}:{{PORT}}/api/v1/heroes"
+					},
+					"response": []
+				},
+				{
+					"name": "/heroes/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://{{HOST}}:{{PORT}}/api/v1/heroes/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Missions",
+			"item": [
+				{
+					"name": "/missions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://{{HOST}}:{{PORT}}/api/v1/heroes/"
+					},
+					"response": []
+				},
+				{
+					"name": "/missions/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://{{HOST}}:{{PORT}}/api/v1/heroes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "missions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://{{HOST}}:{{PORT}}/api/v1/heroes"
+					},
+					"response": []
+				},
+				{
+					"name": "/missions/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://{{HOST}}:{{PORT}}/api/v1/heroes/4"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "74a4a8ef-1636-4705-8b88-f0074a2d0a47",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "08a451c1-d5c3-41e6-94c4-af5a13a0a11d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "4bc625f0-2649-4291-93fc-b050636ace3d",
+			"key": "HOST",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"id": "7a546ddd-673f-4c34-8dfb-bc63bf58c649",
+			"key": "PORT",
+			"value": "8082",
+			"type": "string"
+		}
+	]
+}

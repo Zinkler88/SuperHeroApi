@@ -1,0 +1,17 @@
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/controller/MissionController.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/model/Mission.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/error/NotFoundException.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/error/ConflictException.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/error/ErrorDetails.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/repository/MissionRepository.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/controller/HeroController.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/utils/ApiResponse.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/service/HeroService.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/config/SwaggerConfig.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/error/ValidationError.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/service/MissionService.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/error/ApiBaseException.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/SuperHero.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/repository/HeroRepository.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/error/ApiExceptionHandler.java
+/Users/steve/SuperHeroApi1/src/main/java/com/superhero/model/Hero.java
