@@ -1,7 +1,6 @@
 package com.superhero.model;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -9,7 +8,7 @@ import java.util.List;
 
 
 
-@Document(collection="hero")
+
 public class Hero {
 
     @Id

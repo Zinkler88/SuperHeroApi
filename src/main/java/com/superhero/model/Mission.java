@@ -6,7 +6,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.List;
 
 
-@Document(collection = "mission")
 public class Mission {
 
     @Id
