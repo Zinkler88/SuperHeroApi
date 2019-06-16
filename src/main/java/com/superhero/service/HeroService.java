@@ -70,6 +70,11 @@ public class HeroService {
     }
 
 
+    public Hero update(String id, Hero hero ) {
+        return heroRepository.save(hero);
+    }
+
+
     public void delete(String id) {
         heroRepository.deleteById(id);
     }

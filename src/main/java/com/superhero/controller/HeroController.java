@@ -28,7 +28,7 @@ public class HeroController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Hero> getHeroByLastname(@PathVariable String id){
+    public ResponseEntity<Hero> getHeroById(@PathVariable String id){
         Hero result = heroService.getById(id);
         return new ResponseEntity<Hero>(result, HttpStatus.OK);
     }
@@ -39,10 +39,17 @@ public class HeroController {
         return new ResponseEntity<Hero>(result, HttpStatus.CREATED);
     }
 
-    @DeleteMapping(value = {"", "/"})
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Hero> updateHero(@PathVariable String id, @Valid @RequestBody Hero hero) {
+        Hero result = heroService.update(id, hero);
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteHero(@PathVariable String id) {
         heroService.delete(id);
-        return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
 

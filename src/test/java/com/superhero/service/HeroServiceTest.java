@@ -54,10 +54,10 @@ public class HeroServiceTest {
         List<String> Hereos = Arrays.asList("test1", "test2", "test3");
 
         List<Mission> Missions =  new ArrayList<>(Arrays.asList(
-                new Mission("test1", true, false, Hereos),
-                new Mission("test2", true, false, Hereos),
-                new Mission("test3", true, false, Hereos),
-                new Mission("test4", true, false, Hereos)));
+                new Mission("1", "test1", true, false, Hereos),
+                new Mission("2", "test2", true, false, Hereos),
+                new Mission("3","test3", true, false, Hereos),
+                new Mission("4","test4", true, false, Hereos)));
 
         Hero hero1 = new Hero("1","test1", "test1", "test1", Missions);
         Hero hero2 = new Hero("2","test2", "test2", "test2", Missions);
@@ -71,20 +71,18 @@ public class HeroServiceTest {
 
     @Test
     public void whenGetById_HeroShouldBeFound(){
-
         // It would be better if we add mockData separately
         List<String> Hereos = Arrays.asList("test1", "test2", "test3");
 
         List<Mission> Missions =  new ArrayList<>(Arrays.asList(
-                new Mission("test1", true, false, Hereos),
-                new Mission("test2", true, false, Hereos),
-                new Mission("test3", true, false, Hereos),
-                new Mission("test4", true, false, Hereos)));
+                new Mission("1", "test1", true, false, Hereos),
+                new Mission("2", "test2", true, false, Hereos),
+                new Mission("3","test3", true, false, Hereos),
+                new Mission("4","test4", true, false, Hereos)));
 
 
         Hero hero = new Hero("1", "Hero1", "Hero1","Super", Missions);
         given(heroRepository.findById(anyString())).willReturn(Optional.ofNullable(hero));
-
 
         Hero result = heroService.getById("1");
         assertThat(result.getFirstname()).containsIgnoringCase("Hero1");

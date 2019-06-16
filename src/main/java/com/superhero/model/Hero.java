@@ -9,7 +9,7 @@ import java.util.List;
 
 
 
-@Document
+@Document(collection="hero")
 public class Hero {
 
     @Id
