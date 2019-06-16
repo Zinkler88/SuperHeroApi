@@ -50,10 +50,10 @@ public class HeroControllerTest {
         List<String> Hereos = Arrays.asList("test1", "test2", "test3");
 
         List<Mission> Missions =  new ArrayList<>(Arrays.asList(
-                new Mission("test1", true, false, Hereos),
-                new Mission("test2", true, false, Hereos),
-                new Mission("test3", true, false, Hereos),
-                new Mission("test4", true, false, Hereos)));
+                new Mission("1", "test1", true, false, Hereos),
+                new Mission("2", "test2", true, false, Hereos),
+                new Mission("3","test3", true, false, Hereos),
+                new Mission("4","test4", true, false, Hereos)));
 
         Hero hero1 = new Hero("1","test1", "test1", "test1", Missions);
         Hero hero2 = new Hero("2","test2", "test2", "test2", Missions);
@@ -75,10 +75,10 @@ public class HeroControllerTest {
     public void whenPostHero_thenCreateHero() throws Exception{
         List<String> Hereos = Arrays.asList("test1", "test2", "test3");
         List<Mission> Missions =  new ArrayList<>(Arrays.asList(
-                new Mission("test1", true, false, Hereos),
-                new Mission("test2", true, false, Hereos),
-                new Mission("test3", true, false, Hereos),
-                new Mission("test4", true, false, Hereos)));
+                new Mission("1", "test1", true, false, Hereos),
+                new Mission("2", "test2", true, false, Hereos),
+                new Mission("3","test3", true, false, Hereos),
+                new Mission("4","test4", true, false, Hereos)));
 
 
         Hero hero1 = new Hero("1", "Hero 1", "Hero 1", "SuperHero 1", Missions);
