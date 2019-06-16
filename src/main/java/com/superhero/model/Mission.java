@@ -43,7 +43,7 @@ public class Mission {
         MissionName = missionName;
     }
 
-    public Boolean getCompleted() {
+    public Boolean isCompleted() {
         return IsCompleted;
     }
 
@@ -51,7 +51,7 @@ public class Mission {
         IsCompleted = completed;
     }
 
-    public Boolean getDeleted() {
+    public Boolean isDeleted() {
         return IsDeleted;
     }
 

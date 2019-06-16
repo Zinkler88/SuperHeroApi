@@ -56,6 +56,12 @@ public class MissionService {
      * @param id
      */
     public void deleteMission(String id){
-        missionRepository.deleteById(id);
+
+        try {
+            missionRepository.deleteById(id);
+        }   catch(NoSuchElementException ex) {
+            throw new NotFoundException(String.format("No record with the id [%s] was found in our database", id));
+        }
+
     }
 }

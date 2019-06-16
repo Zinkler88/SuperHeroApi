@@ -85,5 +85,13 @@ public class Hero {
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
+
+    public void addMission(Mission mission) {
+        this.Missions.add(mission);
+    }
+
+    public void removeMission(Mission mission){
+        this.Missions.remove(mission);
+    }
 }
 
