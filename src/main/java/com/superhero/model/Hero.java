@@ -1,14 +1,16 @@
 package com.superhero.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
-
-
+@Document(collection="hero")
 public class Hero {
 
     @Id
@@ -21,7 +23,7 @@ public class Hero {
     @NotNull(message = "lastname is required")
     private String Lastname;
     private String Superheroname;
-    private List<Mission> Missions;
+    private Set<Mission> Missions = new HashSet<>();
     private long timestamp;
 
     public Hero() {
@@ -32,7 +34,7 @@ public class Hero {
         this.Firstname = Firstname;
         this.Lastname = Lastname;
         this.Superheroname = Superheroname;
-        this.Missions = Missions;
+        this.Missions = new HashSet<>(Missions);
         this.timestamp = System.currentTimeMillis();
     }
 
@@ -69,11 +71,11 @@ public class Hero {
         Superheroname = superheroname;
     }
 
-    public List<Mission> getMissions() {
+    public Set<Mission> getMissions() {
         return Missions;
     }
 
-    public void setMissions(List<Mission> missions) {
+    public void setMissions(Set<Mission> missions) {
         Missions = missions;
     }
 
@@ -86,7 +88,8 @@ public class Hero {
     }
 
     public void addMission(Mission mission) {
-        this.Missions.add(mission);
+
+            this.Missions.add(mission);
     }
 
     public void removeMission(Mission mission){
