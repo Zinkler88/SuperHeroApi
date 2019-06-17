@@ -1,6 +1,11 @@
 SuperHeroApi
 
 
+Postman API testing 
+
+
+
+
 
 Automation Steps:
 
@@ -18,5 +23,9 @@ Automation Steps:
 
  optional
  install mongo instance or mongo image on EC2
+ 
+ 
+ 
+ 
 
 
