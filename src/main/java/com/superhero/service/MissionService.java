@@ -15,6 +15,8 @@ public class MissionService {
 
     @Autowired
     private MissionRepository missionRepository;
+    @Autowired
+    private HeroService heroService;
 
     /**
      *
@@ -59,6 +61,7 @@ public class MissionService {
 
         try {
             missionRepository.deleteById(id);
+
         }   catch(NoSuchElementException ex) {
             throw new NotFoundException(String.format("No record with the id [%s] was found in our database", id));
         }
