@@ -21,8 +21,26 @@ Automation Steps:
     docker run -p 8082
 
 
+
+https://cloud.docker.com/repository/docker/zinkler88/superhero-api
+
+
+
+
  optional
  install mongo instance or mongo image on EC2
+
+
+ Tricks
+
+ usermod -aG docker jenkins
+ usermod -aG root jenkins
+ chmod 664 /var/run/docker.sock
+
+
+ chmod 777 /var/run/docker.sock
+
+
  
  
  

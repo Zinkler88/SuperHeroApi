@@ -10,13 +10,20 @@ node{
         sh "${mvnCMD} clean package"
     }
     stage('Build Docker Image'){
-        sh 'docker build -t superhero-api .'
+        sh 'docker build -t zinkler88/superhero-api .'
     }
 
     stage('Push Docker Image'){
+
         withCredentials([string(credentialsId: 'docker-pwd', variable: 'dockerHubPwd')]) {
-            sh 'docker login -u zakaria -p ${dockerHubPwd}'
+            sh 'docker login -u zinkler88 -p ${dockerHubPwd}'
         }
-        sh 'docker push '
+        sh 'docker push zinkler88/superhero-api'
+    }
+    stage('Run Container on Dev Server'){
+        def dockerRun = 'docker run -d --rm -p 8080:8080 --name SuperHeroApi1 zinkler88/superhero-api'
+        sshagent(['dev-server']) {
+        sh "ssh -o StrictHostKeyChecking=no ec2-user@10.0.0.61 ${dockerRun}"
+     }
     }
 }
