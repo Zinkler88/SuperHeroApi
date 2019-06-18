@@ -39,6 +39,10 @@ https://cloud.docker.com/repository/docker/zinkler88/superhero-api
 
 
  chmod 777 /var/run/docker.sock
+ 
+ 
+ 
+ API running on  : http://3.130.65.198:8082/swagger-ui.html#/
 
 
  
