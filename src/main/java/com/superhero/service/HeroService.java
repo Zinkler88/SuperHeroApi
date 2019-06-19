@@ -81,9 +81,7 @@ public class HeroService {
 
     public Hero addMissionToHero(String heroId, String missionId) {
         Hero hero = this.getById(heroId);
-        System.out.println("testhero" + hero);
         Mission mission = missionService.getMissionById(missionId);
-        System.out.println("testMission" +mission);
         hero.addMission(mission);
         return heroRepository.save(hero);
     }

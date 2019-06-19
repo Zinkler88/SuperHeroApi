@@ -4,9 +4,12 @@ import com.superhero.error.NotFoundException;
 import com.superhero.model.Hero;
 import com.superhero.model.Mission;
 import com.superhero.repository.HeroRepository;
+import com.superhero.repository.MissionRepository;
+import com.superhero.utils.ApiResponse;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -31,17 +34,19 @@ import static org.mockito.BDDMockito.given;
 */
 
 @RunWith(SpringRunner.class)
-
-
 public class HeroServiceTest {
 
 
 
     @MockBean
     private HeroRepository heroRepository;
+    @MockBean
+    private MissionRepository missionRepository;
 
     @Autowired
     private HeroService heroService;
+    @Autowired
+    private MissionService missionService;
 
     @TestConfiguration
     static class HeroServiceContextConfiguration {
@@ -49,9 +54,13 @@ public class HeroServiceTest {
         public HeroService heroService() {
             return new HeroService();
         }
+        @Bean
+        public MissionService missionService(){
+            return new MissionService();
+        }
     }
 
-    @Ignore
+
     @Test
     public void whenFindAll_ReturnHeroesList(){
         //MockUp
@@ -74,7 +83,7 @@ public class HeroServiceTest {
           assertThat(heroService.findAll()).hasSize(4).contains(hero1, hero2);
     }
 
-    @Ignore
+
     @Test
     public void whenGetById_HeroShouldBeFound(){
         // It would be better if we add mockData separately
@@ -89,16 +98,51 @@ public class HeroServiceTest {
 
         Hero hero = new Hero("1", "Hero1", "Hero1","Super", Missions);
          given(heroRepository.findById(anyString())).willReturn(Optional.ofNullable(hero));
-
          Hero result = heroService.getById("1");
          assertThat(result.getFirstname()).containsIgnoringCase("Hero1");
     }
 
-    @Ignore
+
     @Test(expected = NotFoundException.class)
     public void whenInvalidId_HeroShouldNotBeFound() {
         given(heroRepository.findById(anyString())).willReturn(Optional.empty());
-            heroService.getById("1");
+        heroService.getById("1");
+    }
+
+    // Fail
+    @Ignore
+    @Test
+    public void whenAddMissionToHero_ReturnMissionsLit(){
+        List<String> Hereos = Arrays.asList("test1", "test2", "test3");
+        List<Mission> Missions =  new ArrayList<>(Arrays.asList(
+                new Mission("1", "test1", true, false, Hereos),
+                new Mission("2", "test2", true, false, Hereos),
+                new Mission("3","test3", true, false, Hereos)));
+        Mission mission4 = new Mission("4","test4", true, false, Hereos);
+        Hero hero = new Hero("1", "Hero1", "Hero1","Super", Missions);
+        given(heroRepository.findById(anyString())).willReturn(Optional.ofNullable(hero));
+
+
+        Hero result  = heroService.addMissionToHero(hero.getId(), mission4.getId());
+
+        assertThat(result.getMissions());
+    }
+
+
+    // Fail
+    @Ignore
+    @Test
+    public void whenRemoveMissionToHero_ReturnMissionsLit(){
+        List<String> Hereos = Arrays.asList("test1", "test2", "test3");
+        List<Mission> Missions =  new ArrayList<>(Arrays.asList(
+                new Mission("1", "test1", true, false, Hereos),
+                new Mission("2", "test2", true, false, Hereos),
+                new Mission("3","test3", true, false, Hereos)));
+        Mission mission4 = new Mission("4","test4", true, false, Hereos);
+        Hero hero = new Hero("1", "Hero1", "Hero1","Super", Missions);
+        given(heroRepository.findById(anyString())).willReturn(Optional.ofNullable(hero));
+        ApiResponse result  = heroService.romoveMissionToHero(hero.getId(), mission4.getId());
+        assertThat(result.getSuccess()).isEqualTo(true);
     }
 
 }

@@ -27,7 +27,7 @@ public class Hero {
     private long timestamp;
 
     public Hero() {
-        this.timestamp =System.currentTimeMillis();
+        this.timestamp = System.currentTimeMillis();
     }
     public Hero(String id ,String Firstname, String Lastname, String Superheroname, List<Mission> Missions) {
         this.id = id;
