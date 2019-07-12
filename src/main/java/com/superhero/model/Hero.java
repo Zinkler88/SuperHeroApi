@@ -1,6 +1,11 @@
 package com.superhero.model;
 
+import io.github.kaiso.relmongo.annotation.CascadeType;
+import io.github.kaiso.relmongo.annotation.FetchType;
+import io.github.kaiso.relmongo.annotation.JoinProperty;
+import io.github.kaiso.relmongo.annotation.OneToMany;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
@@ -23,6 +28,10 @@ public class Hero {
     @NotNull(message = "lastname is required")
     private String Lastname;
     private String Superheroname;
+
+    // @DBRef
+    @OneToMany(fetch= FetchType.EAGER, cascade = CascadeType.PERSIST)
+    @JoinProperty(name="Mission")
     private Set<Mission> Missions = new HashSet<>();
     private long timestamp;
 

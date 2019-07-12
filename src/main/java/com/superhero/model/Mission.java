@@ -12,7 +12,6 @@ public class Mission {
 
     @Id
     private String id;
-
     private String MissionName;
     private Boolean IsCompleted;
     private Boolean IsDeleted;

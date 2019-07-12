@@ -16,7 +16,7 @@ package com.superhero.controller;
 
 @RestController
 @RequestMapping(value = "/api/v1/heroes")
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+
 public class HeroController {
 
     @Autowired
