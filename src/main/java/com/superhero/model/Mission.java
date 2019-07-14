@@ -11,8 +11,7 @@ import java.util.List;
 public class Mission {
 
     @Id
-    private String id;
-
+    public String id;
     private String MissionName;
     private Boolean IsCompleted;
     private Boolean IsDeleted;
@@ -20,6 +19,7 @@ public class Mission {
 
 
     public Mission(String id, String MissionName, boolean IsCompleted, boolean IsDeleted, List<String> Heroes) {
+        this.id = id;
         this.MissionName = MissionName;
         this.IsCompleted = IsCompleted;
         this.IsDeleted = IsDeleted;

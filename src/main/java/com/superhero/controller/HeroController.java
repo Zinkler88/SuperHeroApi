@@ -1,6 +1,7 @@
 package com.superhero.controller;
 
         import com.superhero.model.Hero;
+        import com.superhero.model.Mission;
         import com.superhero.service.HeroService;
         import com.superhero.utils.ApiResponse;
         import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +13,12 @@ package com.superhero.controller;
         import java.util.ArrayList;
         import java.util.Arrays;
         import java.util.List;
+        import java.util.Set;
 
 
 @RestController
 @RequestMapping(value = "/api/v1/heroes")
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+
 public class HeroController {
 
     @Autowired
@@ -35,6 +37,12 @@ public class HeroController {
         return new ResponseEntity<Hero>(result, HttpStatus.OK);
     }
 
+    @GetMapping("/{heroId}/missions")
+    public ResponseEntity<Set<Mission>> getHeroMissions(@PathVariable String heroId){
+        Set<Mission> result = heroService.getHeroMissions(heroId);
+        return new ResponseEntity<Set<Mission>>(result, HttpStatus.OK);
+    }
+
     @PostMapping(value = {"", "/"})
     public ResponseEntity<Hero> createHero(@Valid @RequestBody Hero hero) {
         Hero result = heroService.save(hero);
@@ -48,11 +56,13 @@ public class HeroController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
-    @DeleteMapping("/{heroId}")
-    public ResponseEntity<Void> deleteHero(@PathVariable String heroId) {
-        heroService.delete(heroId);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    @PutMapping("/{heroId}/missions/{missionId}")
+    public ResponseEntity<Hero> updateHeroMission(@PathVariable String heroId, @PathVariable String missionId, @Valid @RequestBody Mission mission) {
+        Hero result = heroService.updateHeroMission(heroId, missionId ,mission);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
+
+
 
     @PostMapping("/{heroId}/{missionId}")
     public ResponseEntity<Hero> addMissionToHero(@PathVariable String heroId, @PathVariable String missionId) {
@@ -61,9 +71,25 @@ public class HeroController {
     }
 
 
-    @DeleteMapping("/{heroId}/{missionId}")
-    public ApiResponse removeMissionToHero(@PathVariable String heroId, @PathVariable String missionId) {
-        return heroService.romoveMissionToHero(heroId, missionId);
+    @PostMapping("/{heroId}/missions")
+    public ResponseEntity<Hero> addMissionsToHero(@PathVariable String heroId, @Valid @RequestBody Mission mission) {
+        Hero result = heroService.addMissionsToHero(heroId, mission);
+        return new ResponseEntity<Hero>(result, HttpStatus.CREATED);
     }
+
+
+    @DeleteMapping("/{heroId}")
+    public ResponseEntity<Void> deleteHero(@PathVariable String heroId) {
+        heroService.delete(heroId);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+
+    @DeleteMapping("/{heroId}/missions/{missionId}")
+    public ApiResponse removeMissionFromHero(@PathVariable String heroId, @PathVariable String missionId) {
+         return heroService.softDelete(heroId, missionId);
+       //  return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
 }
 
