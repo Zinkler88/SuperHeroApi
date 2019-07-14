@@ -5,7 +5,6 @@ import io.github.kaiso.relmongo.annotation.FetchType;
 import io.github.kaiso.relmongo.annotation.JoinProperty;
 import io.github.kaiso.relmongo.annotation.OneToMany;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
@@ -29,7 +28,8 @@ public class Hero {
     private String Lastname;
     private String Superheroname;
 
-    // @DBRef
+
+
     @OneToMany(fetch= FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinProperty(name="Mission")
     private Set<Mission> Missions = new HashSet<>();
@@ -84,6 +84,7 @@ public class Hero {
         return Missions;
     }
 
+
     public void setMissions(Set<Mission> missions) {
         Missions = missions;
     }
@@ -97,11 +98,11 @@ public class Hero {
     }
 
     public void addMission(Mission mission) {
-
             this.Missions.add(mission);
     }
 
     public void removeMission(Mission mission){
+        // remove by ID
         this.Missions.remove(mission);
     }
 }
